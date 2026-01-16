@@ -95,7 +95,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""b0457117-2d33-472c-b1fa-65286d16e48d"",
+                    ""id"": ""8cb2b182-7e5d-482a-8ff2-ee1644e4a2fc"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -104,8 +104,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""32f8f535-0d9a-4ac6-88c0-8ec3ae5cc2e5"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""id"": ""3f553935-d391-4549-8f44-26c8fca030ff"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -114,7 +114,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""cd7ffdce-1ade-4e7b-9e6d-3a7bc745caa8"",
+                    ""id"": ""3ce57efe-5d48-4a44-b571-07bad80b0e41"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -124,9 +124,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""ac17fc35-fbb4-4cb4-9c4c-8df0e102bebb"",
-                    ""path"": ""2DVector"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""647b96b6-47bb-413a-b2d1-a152ddbfedae"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -135,30 +135,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""8e2c7347-78f5-41c8-adef-bbd975acb7e9"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""9fd51036-4408-4e53-a2e6-58eadf579aa6"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""d5b8e081-0dfb-4c6c-9e06-e9d619cc4069"",
+                    ""name"": ""negative"",
+                    ""id"": ""65620b6d-36fc-4431-bced-f15f7fd175db"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -168,8 +146,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""right"",
-                    ""id"": ""01e563a2-e58a-41e4-8ecb-d4428d7593bb"",
+                    ""name"": ""positive"",
+                    ""id"": ""54774ecd-a0fa-4854-b214-4811bf4f0bb4"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",

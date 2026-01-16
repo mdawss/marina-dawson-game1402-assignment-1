@@ -25,9 +25,6 @@ public class PlayerController : MonoBehaviour
         }
 
         RB.constraints = RigidbodyConstraints2D.FreezeRotation;
-        
-        
-        // RB.sharedMaterial = PhysicsMat;
     }
 
     // Update is called once per frame
