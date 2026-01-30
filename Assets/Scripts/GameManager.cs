@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,12 @@ public class GameManager : MonoBehaviour
     public int minHealth = 0;
     public int currentHealth;
     public int maxHealth = 0;
+
+    public GameObject PauseMenu;
+
+    public bool ispaused;
+    
+    public UIManager uiManager;
 
     public void IncrementCount(Collectible collectible, int amount)
     {
@@ -32,15 +39,18 @@ public class GameManager : MonoBehaviour
     public void GainCoin(int coingain)
     {
         CurrentCoins = Mathf.Clamp(CurrentCoins + coingain, 0, MaxCoins);
+        uiManager.IncrementScore(CurrentCoins);
     }
 
     public void LooseCoin(int coinloss)
     {
         CurrentCoins = Mathf.Clamp(CurrentCoins - coinloss, 0, MaxCoins);
+        uiManager.IncrementScore(CurrentCoins);
     }
     
     public void TakeDamage(int damage)
     {
+        uiManager.DecrementHeartSprite(damage);
         currentHealth -= damage;
         Debug.Log("Damage Taken");
         PlayerDeath();
@@ -48,6 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void GainHealth(int healthBoost)
     {
+        uiManager.IncrementHeartSprite(healthBoost);
         currentHealth += healthBoost;
     }
     
@@ -55,6 +66,7 @@ public class GameManager : MonoBehaviour
     public void ResetHealth()
     {
         currentHealth = maxHealth;
+        uiManager.IncrementHeartSprite(currentHealth);
     }
     
     public void PlayerDeath()
@@ -70,17 +82,41 @@ public class GameManager : MonoBehaviour
     //if the player collects the max amount of coins in the level then they win
     {
         if (CurrentCoins != MaxCoins) return;
+        SceneManager.LoadScene(SceneName);
     }
 
     public void RespawnFunction()
     {
         SceneManager.LoadScene(SceneName);
     }
-    
+
+
+    public void Pause()
+    {
+        if (ispaused) 
+        {
+            ispaused = false;
+            Time.timeScale = 1;
+            PauseMenu.SetActive(false);
+        }
+        else
+        {
+            ispaused = true;
+            Time.timeScale = 0;
+            PauseMenu.SetActive(true);
+        }
+    }
+
+    private void Update()
+    {
+        
+    }
+
     void Start()
     //significant when the player wants to replay the game or dies and tries again
     {
         ResetHealth();
+        uiManager = FindFirstObjectByType<UIManager>();
     } 
     
 }
