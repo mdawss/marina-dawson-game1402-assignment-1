@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4219281500751088967}
   m_Layer: 0
   m_Name: Health Pickup
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.38, y: -3.25, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1324, y: 1.2013, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676154346759646309}
@@ -157,7 +157,6 @@ MonoBehaviour:
   _pickupSound: {fileID: 0}
   _pickupAmount: 1
   _spriteRenderer: {fileID: 0}
-  _particleSystem: {fileID: 2281004170732841809, guid: 7c37eafa8a778cd41b7bb232487a6a7b, type: 3}
   _secondsToWait: 0.2
 --- !u!1001 &7564920135371376
 PrefabInstance:

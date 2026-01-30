@@ -45,9 +45,5 @@ public class InputManager : MonoBehaviour
         //Debug.Log("move");
         OnMove?.Invoke(context.ReadValue<float>());
     }
-
-    void Update()
-    {
-        
-    }
+    
 }

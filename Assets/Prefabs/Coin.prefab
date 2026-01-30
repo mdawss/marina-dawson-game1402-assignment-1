@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8749906419502001301}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,6 @@ MonoBehaviour:
   _pickupSound: {fileID: 0}
   _pickupAmount: 1
   _spriteRenderer: {fileID: 0}
-  _particleSystem: {fileID: 2281004170732841809, guid: 7c37eafa8a778cd41b7bb232487a6a7b, type: 3}
   _secondsToWait: 0.2
 --- !u!1001 &3895580455398013034
 PrefabInstance:

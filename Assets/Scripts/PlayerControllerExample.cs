@@ -21,7 +21,6 @@ public class PlayerControllerExample : MonoBehaviour
     private Rigidbody2D _playerRB;
 
     private bool _isOnGround;
-    private bool _canDoubleJump;
 
     [SerializeField] private float coyoteTime;
     
@@ -50,19 +49,12 @@ public class PlayerControllerExample : MonoBehaviour
         if (_isOnGround || coyoteTime < _coyoteTimer) //checking if I am on the ground or if  I can utilize coyote time
         {
             _playerRB.AddForceY(jumpForce, ForceMode2D.Impulse);
-            _canDoubleJump = true;
-        }
-        else if (_canDoubleJump)
-        {
-            _playerRB.AddForceY(jumpForce, ForceMode2D.Impulse);
-            _canDoubleJump = false;
         }
         _coyoteTimer = 0; //reset the coyote timer back to 0 so it can be utilized again
     }
    
     void HandleMoveInput(float value)
     {
-        Debug.Log("MoveInput");
         _moveInput = value;
     }
 
