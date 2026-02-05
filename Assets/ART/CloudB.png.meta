@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a6e8cd5edf31172409a8438d70e5afce
+guid: 81cae257472cd2045ba1ada8a9f42894
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2589257360003011558
-    second: Item 3-1.png_0
+      213: 340170011919337960
+    second: CloudB_0
+  - first:
+      213: 6260210607618095106
+    second: CloudB_1
+  - first:
+      213: 356118542704118083
+    second: CloudB_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item 3-1.png_0
+      name: CloudB_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 24
-        width: 23
-        height: 20
+        x: 0
+        y: 85
+        width: 369
+        height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1c64f8462c111cd0800000000000000
-      internalID: -2589257360003011558
+      spriteID: 8e941b3d2d688b400800000000000000
+      internalID: 340170011919337960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudB_1
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 226
+        width: 1000
+        height: 474
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208753e216cb0e650800000000000000
+      internalID: 6260210607618095106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CloudB_2
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 0
+        width: 457
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3490fc38def21f400800000000000000
+      internalID: 356118542704118083
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9788b4826538bf5439f8d88ae7de2991
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Item 3-1.png_0: -2589257360003011558
+      CloudB_0: 340170011919337960
+      CloudB_1: 6260210607618095106
+      CloudB_2: 356118542704118083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

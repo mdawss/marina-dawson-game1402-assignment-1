@@ -8,18 +8,19 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public List<GameObject> HeartsUI = new List<GameObject>();
-    public GameObject HeartPrefab;
-    public GameObject heartSpawner;
-    public TMP_Text ScoreText;
     
-    public string SceneName;
+    public List<GameObject> HeartsUI = new List<GameObject>(); //quite literally the most important part of the script
+    public GameObject HeartPrefab; //prefabs to be spawned within the list
+    public GameObject heartSpawner; //destination where the hearts will be spawned
+    public TMP_Text ScoreText; //the text that reflects the amount of coins picked up
     
-    public GameManager gameManager;
+    public string SceneName; //variable for the scene
+    
+    public GameManager gameManager; //calls the game manager
     
     public void LoadLevel1()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadScene(SceneName); //loads the level 1 scene
     }
     
 
@@ -27,10 +28,11 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < amount; i++) 
         {
-            var heart = Instantiate(HeartPrefab, heartSpawner.transform.position, Quaternion.identity);
-            heart.transform.parent = heartSpawner.transform;
-            HeartsUI.Add(heart);
-            Debug.Log(HeartsUI);
+            var heart = Instantiate(HeartPrefab, heartSpawner.transform.position, Quaternion.identity); //places the hearts onscreeen at the heart spawner location
+            //heart.transform.parent = heartSpawner.transform; //spawner now takes ownership of the hearts
+            heart.transform.SetParent(heartSpawner.transform); //spawner now takes ownership of the hearts
+            HeartsUI.Add(heart); //the heart added to the amount
+            Debug.Log("Heart Incremented");
         }
     }
 
@@ -43,20 +45,20 @@ public class UIManager : MonoBehaviour
         }
         for (int i = 0; i < amount; i++)
         {
-            var lastHeart = HeartsUI[i%HeartsUI.Count] ; //modulus to prevent going out of bounds compare against count in list of heartss
-            Destroy(lastHeart);
-            HeartsUI.RemoveAt(i%HeartsUI.Count);
-            Debug.Log(HeartsUI);
+            var lastHeart = HeartsUI[i%HeartsUI.Count] ; //modulus to prevent going out of bounds compare against count in list of hearts
+            Destroy(lastHeart); //the placement of the hearts onscreen
+            HeartsUI.RemoveAt(i%HeartsUI.Count); 
+            Debug.Log("Heart decremented");
         }
     }
 
     public void IncrementScore(int amount)
     {
-        ScoreText.text = amount.ToString();
+        ScoreText.text = amount.ToString(); //reflects the score amount and turns it to a string onscreen
     }
 
     private void Start()
     {
-        gameManager = FindFirstObjectByType<GameManager>();
+        gameManager = FindFirstObjectByType<GameManager>(); //reference to game manager
     }
 }

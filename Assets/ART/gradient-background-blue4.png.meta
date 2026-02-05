@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a6e8cd5edf31172409a8438d70e5afce
+guid: 44984c8041434224db44688d922ff461
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2589257360003011558
-    second: Item 3-1.png_0
+      213: -6169929179608894117
+    second: gradient-background-blue4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Item 3-1.png_0
+      name: gradient-background-blue4_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 24
-        width: 23
-        height: 20
+        x: 0
+        y: 0
+        width: 1080
+        height: 608
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1c64f8462c111cd0800000000000000
-      internalID: -2589257360003011558
+      spriteID: b553810d912006aa0800000000000000
+      internalID: -6169929179608894117
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9788b4826538bf5439f8d88ae7de2991
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Item 3-1.png_0: -2589257360003011558
+      gradient-background-blue4_0: -6169929179608894117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

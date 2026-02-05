@@ -39,17 +39,15 @@ public class InputManager : MonoBehaviour
 
     void OnJumpPressed(InputAction.CallbackContext context)
     {
-        Debug.Log("Jump");
         OnJump?.Invoke();
     }
 
     void OnMovement(InputAction.CallbackContext context)
-    {
-        //Debug.Log("move");
+    { 
         OnMove?.Invoke(context.ReadValue<float>());
     }
 
-    void OnPause(InputAction.CallbackContext context)
+    void OnPause(InputAction.CallbackContext context) //imput action paused will call the pause function
     {
         Debug.unityLogger.Log("Game Pause");
         gameManager.Pause();
